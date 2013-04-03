@@ -25,8 +25,10 @@ gem 'jquery-rails'
 gem 'redis'
 gem 'sinatra', require: "sinatra/base"
 gem 'haml'
+gem 'devise'
 gem 'pry'
 gem 'pry-rails'
+gem 'pry-debugger'
 
 group :test do
   gem 'capybara'
