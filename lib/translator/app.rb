@@ -5,6 +5,9 @@ module Translator
   class App < Sinatra::Base
     set :environment, Rails.env
     enable :inline_templates
+    before do
+      env["warden"].authenticate!(scope: "admin")
+    end
 
     get "/:from/:to" do |from, to|
       exhibit_translations(from, to)
